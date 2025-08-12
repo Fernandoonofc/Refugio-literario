@@ -1,0 +1,325 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f0e6;
+  color: #333;
+}
+
+header {
+  background-color: #a1866f;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.6rem;
+  user-select: none;
+}
+
+#menu-principal {
+  display: flex;
+  background-color: #a1866f;
+  padding: 0;
+  user-select: none;
+  flex-wrap: nowrap;
+  gap: 0;
+}
+
+.aba {
+  flex: 1 1 0;
+  border: none;
+  outline: none;
+  background: #a1866f;
+  color: #fff;
+  font-size: 1.08rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 14px 0;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  border-radius: 0;
+  white-space: nowrap;
+}
+
+.aba.ativa {
+  background: #f5f0e6;
+  color: #a1866f;
+  border-bottom: 4px solid #a1866f;
+  z-index: 2;
+}
+
+.aba:not(.ativa) {
+  background: #a1866f;
+  color: #fff;
+  z-index: 1;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  min-height: 480px;
+  gap: 20px;
+  flex-wrap: nowrap;
+  overflow-x: hidden; /* evita rolagem horizontal */
+  max-width: 400px; /* limita largura para celular */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.aba-conteudo {
+  display: none;
+  background: white;
+  border-radius: 12px;
+  border: 3px solid #7f644e; /* borda marrom */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.10);
+  padding: 20px 24px;
+  width: 350px;
+  max-height: 450px;
+  overflow-y: auto;
+  margin: 0 auto;
+  box-sizing: border-box;
+  background-color: #fff;
+  text-align: center; /* centraliza o texto */
+}
+
+.aba-conteudo.ativa {
+  display: block;
+}
+
+.aba-conteudo h2,
+.aba-conteudo p {
+  margin: 0 0 12px 0;
+}
+
+.produto, .livro {
+  border-bottom: 1px solid #e0dcd4;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+.produto:last-child, .livro:last-child {
+  border-bottom: none;
+}
+
+button {
+  background-color: #7f644e;
+  border: none;
+  color: white;
+  padding: 7px 12px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 5px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+button:hover {
+  background-color: #665138;
+}
+
+select {
+  padding: 6px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  margin-top: 6px;
+  display: block;
+  width: 100%;
+  max-width: 230px;
+  font-size: 1rem;
+}
+
+#itens-carrinho .item-carrinho {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+  font-size: 0.95rem;
+  flex-wrap: nowrap;
+  align-items: center; /* centraliza verticalmente */
+}
+
+#itens-carrinho .item-carrinho:last-child {
+  border-bottom: none;
+}
+
+#finalizar-compra {
+  margin-top: 18px;
+  width: 100%;
+  background-color: #7f644e;
+  font-weight: 700;
+  padding: 10px;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+#finalizar-compra:hover {
+  background-color: #665138;
+}
+
+/* Estilo específico para os botões + e - dentro do carrinho */
+
+/* Container interno que agrupa nome, preço e controles de quantidade */
+.item-carrinho > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  flex: 1 1 auto;
+  min-width: 0;
+  word-break: break-word;
+}
+
+/* Para o texto do nome e tipo ficar à esquerda */
+.item-carrinho > div:first-child > strong {
+  font-size: 1rem;
+  word-break: break-word;
+  white-space: normal;
+  flex-shrink: 0;
+}
+
+/* Container dos botões + - e quantidade */
+.item-carrinho > div:first-child > span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Botões de controle de quantidade ( + e - ) */
+.item-carrinho button.btn-minus {
+  width: 28px;
+  height: 28px;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 0;
+  border-radius: 4px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: #d32f2f;
+}
+
+.item-carrinho button.btn-minus:hover {
+  background-color: #9a2424;
+}
+
+.item-carrinho button.btn-plus {
+  width: 28px;
+  height: 28px;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 0;
+  border-radius: 4px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: #388e3c;
+}
+
+.item-carrinho button.btn-plus:hover {
+  background-color: #27632a;
+}
+
+/* Número da quantidade */
+.item-carrinho > div:first-child > span > span {
+  display: inline-block;
+  min-width: 22px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* Ajuste no botão Excluir para não sair da tela */
+.item-carrinho > div:last-child {
+  margin-top: 10px;
+  text-align: center;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: visible;
+  flex-shrink: 0;
+}
+
+/* ----------- Responsividade ----------- */
+
+/* Para tablets e telas intermediárias */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .aba-conteudo {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: none;
+    margin-bottom: 20px;
+  }
+
+  #menu-principal {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .aba {
+    flex: 1 1 45%;
+    font-size: 1rem;
+    padding: 10px 0;
+  }
+}
+
+/* Para celulares pequenos */
+@media (max-width: 480px) {
+  .aba {
+    flex: 1 1 100%;
+  }
+
+  button,
+  select {
+    font-size: 0.9rem;
+    padding: 6px 8px;
+  }
+
+  .item-carrinho > div:first-child {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .item-carrinho > div:first-child > span {
+    order: 2;
+    margin-top: 6px;
+  }
+
+  /* Alinhamento e ajuste no botão Excluir */
+  .item-carrinho > div:last-child {
+    margin-top: 10px;
+    text-align: center;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: visible;
+  }
+
+  /* Nome do produto pode quebrar linha */
+  .item-carrinho strong {
+    word-break: break-word;
+    white-space: normal;
+  }
+
+  /* Botão de finalizar compra ocupa largura total com borda arredondada */
+  #finalizar-compra {
+    width: 100%;
+    border-radius: 8px;
+    box-sizing: border-box;
+  }
+}
