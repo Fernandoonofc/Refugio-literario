@@ -1,51 +1,51 @@
 const livros = [
-  { id: 1, titulo: "Duna", autor:"Frank Herbert", precoComprar: 35, precoAlugar: 12, genero: "ficcao" },
-  { id: 2, titulo: "Fahrenheit 451", autor: "Ray Bradbury", precoComprar: 25, precoAlugar: 8, genero: "ficcao" },
-  { id: 3, titulo: "Eu,Robo", autor: "Isaac Asimov", precoComprar: 40, precoAlugar: 15, genero: "ficcao" },
-  { id: 4, titulo: "O Silêncio dos Inocentes", autor: "Thomas Harris", precoComprar: 30, precoAlugar: 10, genero: "suspense" },
-  { id: 5, titulo: "A Garota no Trem", autor: "Paula Hawkins", precoComprar: 45, precoAlugar: 15, genero: "suspense" },
-  { id: 6, titulo: "It:A Coisa", autor: "Stephen King", precoComprar: 60, precoAlugar: 20, genero: "suspense" },
-  { id: 7, titulo: "Meditações", autor: "Marco Aurélio", precoComprar: 60, precoAlugar: 20, genero: "autoajuda" }
+  { id: 1, titulo: "Duna", autor:"Frank Herbert", precoComprar: 80, precoAlugar: 45, genero: "ficcao" },
+  { id: 2, titulo: "Fahrenheit 451", autor: "Ray Bradbury", precoComprar: 54, precoAlugar: 34, genero: "ficcao" },
+  { id: 3, titulo: "Eu,Robo", autor: "Isaac Asimov", precoComprar: 55, precoAlugar: 33, genero: "ficcao" },
+  { id: 4, titulo: "O Silêncio dos Inocentes", autor: "Thomas Harris", precoComprar: 56, precoAlugar: 32, genero: "suspense" },
+  { id: 5, titulo: "A Garota no Trem", autor: "Paula Hawkins", precoComprar: 45, precoAlugar: 29, genero: "suspense" },
+  { id: 6, titulo: "It:A Coisa", autor: "Stephen King", precoComprar: 80, precoAlugar: 46, genero: "suspense" },
+  { id: 7, titulo: "Meditações", autor: "Marco Aurélio", precoComprar: 41, precoAlugar: 35, genero: "autoajuda" }
 ,
   { id: 8, titulo: "Os 7 Hábitos das Pessoas Altamente Eficazes", autor: "Stephen Covey", precoComprar: 60, precoAlugar: 20, genero: "autoajuda" }
 ,
-  { id: 9, titulo: "O Poder do Hábito", autor: "Charles Duhigg", precoComprar: 60, precoAlugar: 20, genero: "autoajuda" }
+  { id: 9, titulo: "O Poder do Hábito", autor: "Charles Duhigg", precoComprar: 45, precoAlugar: 32, genero: "autoajuda" }
 ,
-  { id: 10, titulo: "Orgulho e Preconceito", autor: "Jane Austin", precoComprar: 60, precoAlugar: 20, genero: "romance" }
+  { id: 10, titulo: "Orgulho e Preconceito", autor: "Jane Austin", precoComprar: 52, precoAlugar: 31, genero: "romance" }
 ,
-  { id: 11, titulo: "Dom Casmurro", autor: "Machado de Assis", precoComprar: 60, precoAlugar: 20, genero: "romance" }
+  { id: 11, titulo: "Dom Casmurro", autor: "Machado de Assis", precoComprar: 38, precoAlugar: 26, genero: "romance" }
 ,
-  { id: 12, titulo: "A Culpa é das Estrelas ", autor: "John Green", precoComprar: 60, precoAlugar: 20, genero: "romance" }
+  { id: 12, titulo: "A Culpa é das Estrelas ", autor: "John Green", precoComprar: 59, precoAlugar: 34, genero: "romance" }
 ,
-  { id: 13, titulo: "Clean Code", autor: "Robert C. Martin", precoComprar: 60, precoAlugar: 20, genero: "tecnologia" }
+  { id: 13, titulo: "Clean Code", autor: "Robert C. Martin", precoComprar: 96, precoAlugar: 67, genero: "tecnologia" }
 ,
-  { id: 14, titulo: "A Arte de Programar Computadores", autor: "Donald Knuth", precoComprar: 60, precoAlugar: 20, genero: "tecnologia" }
+  { id: 14, titulo: "A Arte de Programar Computadores", autor: "Donald Knuth", precoComprar: 140, precoAlugar: 96, genero: "tecnologia" }
 ,
-  { id: 15, titulo: "Estruturas de Dados e Algoritmos em Java", autor: "Robert Lafore", precoComprar: 60, precoAlugar: 20, genero: "tecnologia" }
+  { id: 15, titulo: "Estruturas de Dados e Algoritmos em Java", autor: "Robert Lafore", precoComprar: 110, precoAlugar: 70, genero: "tecnologia" }
 ,
-  { id: 16, titulo: "Harry Potter e a Pedra Filosofal", autor: "J.K.  Rowling", precoComprar: 60, precoAlugar: 20, genero: "fantasia" }
+  { id: 16, titulo: "Harry Potter e a Pedra Filosofal", autor: "J.K.  Rowling", precoComprar: 104, precoAlugar: 57, genero: "fantasia" }
 ,
-  { id: 17, titulo: "O Senhor dos Anéis", autor: "J.R.R. Tolkien", precoComprar: 60, precoAlugar: 20, genero: "fantasia" }
+  { id: 17, titulo: "O Senhor dos Anéis", autor: "J.R.R. Tolkien", precoComprar: 100, precoAlugar: 85, genero: "fantasia" }
 ,
-  { id: 18, titulo: "O Pequeno Príncipe", autor: "Antoine de Saint-Exupéry", precoComprar: 60, precoAlugar: 20, genero: "fantasia" }
+  { id: 18, titulo: "O Pequeno Príncipe", autor: "Antoine de Saint-Exupéry", precoComprar: 34, precoAlugar: 22, genero: "fantasia" }
 ,
-  { id: 19, titulo: "Diário de Anne Frank", autor: "Anne Frank", precoComprar: 60, precoAlugar: 20, genero: "biografia" }
+  { id: 19, titulo: "Diário de Anne Frank", autor: "Anne Frank", precoComprar: 46, precoAlugar: 28, genero: "biografia" }
 ,
-  { id: 20, titulo: "Steve Jobs", autor: "Walter Isaacson", precoComprar: 60, precoAlugar: 20, genero: "biografia" }
+  { id: 20, titulo: "Steve Jobs", autor: "Walter Isaacson", precoComprar: 58, precoAlugar: 28, genero: "biografia" }
 ,
-  { id: 21, titulo: "Long Walk to Freedom", autor: "Nelson Mandela", precoComprar: 60, precoAlugar: 20, genero: "biografia" }
+  { id: 21, titulo: "Long Walk to Freedom", autor: "Nelson Mandela", precoComprar: 69, precoAlugar: 35, genero: "biografia" }
 ,
-  { id: 22, titulo: "Sapiens: Uma Breve História da Humanidade", autor: "Yuval Noah Harari", precoComprar: 60, precoAlugar: 20, genero: "historia" }
+  { id: 22, titulo: "Sapiens: Uma Breve História da Humanidade", autor: "Yuval Noah Harari", precoComprar: 75, precoAlugar: 52, genero: "historia" }
 ,
-  { id: 23, titulo: "1499: O Brasil Antes de Cabral", autor: "André Chelotti", precoComprar: 60, precoAlugar: 20, genero: "historia" }
+  { id: 23, titulo: "1499: O Brasil Antes de Cabral", autor: "André Chelotti", precoComprar: 45, precoAlugar: 36, genero: "historia" }
 ,
-  { id: 24, titulo: "Os Donos do Poder", autor: "Raymundo farao", precoComprar: 60, precoAlugar: 20, genero: "historia" }
+  { id: 24, titulo: "Os Donos do Poder", autor: "Raymundo farao", precoComprar: 70, precoAlugar: 52, genero: "historia" }
 ,
-  { id: 25, titulo: "O Mundo como Vontade e Representação", autor: "Arthur Schopenhauer", precoComprar: 60, precoAlugar: 20, genero: "filosofia" }
+  { id: 25, titulo: "O Mundo como Vontade e Representação", autor: "Arthur Schopenhauer", precoComprar: 120, precoAlugar: 70, genero: "filosofia" }
 ,
-  { id: 26, titulo: "Crítica da Razão Pura", autor: "Immanuel Kant", precoComprar: 60, precoAlugar: 20, genero: "filosofia" }
+  { id: 26, titulo: "Crítica da Razão Pura", autor: "Immanuel Kant", precoComprar: 140, precoAlugar: 65, genero: "filosofia" }
 ,
-  { id: 27, titulo: "Convite à filosofia", autor: "Marilena Chaui", precoComprar: 60, precoAlugar: 20, genero: "filosofia" }
+  { id: 27, titulo: "Convite à filosofia", autor: "Marilena Chaui", precoComprar: 42, precoAlugar: 37, genero: "filosofia" }
 ];
 
 const bebidas = [
