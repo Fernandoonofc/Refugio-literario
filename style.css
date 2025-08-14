@@ -73,7 +73,7 @@ main {
   background: white;
   border-radius: 12px;
   border: 3px solid #7f644e; /* borda marrom */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.10);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px 24px;
   width: 350px;
   max-height: 450px;
@@ -93,7 +93,8 @@ main {
   margin: 0 0 12px 0;
 }
 
-.produto, .livro {
+.produto,
+.livro {
   border-bottom: 1px solid #e0dcd4;
   padding: 10px 0;
   display: flex;
@@ -102,7 +103,8 @@ main {
   font-size: 0.95rem;
 }
 
-.produto:last-child, .livro:last-child {
+.produto:last-child,
+.livro:last-child {
   border-bottom: none;
 }
 
