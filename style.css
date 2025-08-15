@@ -62,8 +62,8 @@ main {
   min-height: 480px;
   gap: 20px;
   flex-wrap: nowrap;
-  overflow-x: hidden; /* evita rolagem horizontal */
-  max-width: 400px; /* limita largura para celular */
+  overflow-x: hidden;
+  max-width: 400px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -72,8 +72,8 @@ main {
   display: none;
   background: white;
   border-radius: 12px;
-  border: 3px solid #7f644e; /* borda marrom */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 3px solid #7f644e;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.10);
   padding: 20px 24px;
   width: 350px;
   max-height: 450px;
@@ -81,7 +81,7 @@ main {
   margin: 0 auto;
   box-sizing: border-box;
   background-color: #fff;
-  text-align: center; /* centraliza o texto */
+  text-align: center;
 }
 
 .aba-conteudo.ativa {
@@ -93,8 +93,7 @@ main {
   margin: 0 0 12px 0;
 }
 
-.produto,
-.livro {
+.produto, .livro {
   border-bottom: 1px solid #e0dcd4;
   padding: 10px 0;
   display: flex;
@@ -103,8 +102,7 @@ main {
   font-size: 0.95rem;
 }
 
-.produto:last-child,
-.livro:last-child {
+.produto:last-child, .livro:last-child {
   border-bottom: none;
 }
 
@@ -144,7 +142,7 @@ select {
   padding-bottom: 8px;
   font-size: 0.95rem;
   flex-wrap: nowrap;
-  align-items: center; /* centraliza verticalmente */
+  align-items: center;
 }
 
 #itens-carrinho .item-carrinho:last-child {
@@ -165,9 +163,6 @@ select {
   background-color: #665138;
 }
 
-/* Estilo específico para os botões + e - dentro do carrinho */
-
-/* Container interno que agrupa nome, preço e controles de quantidade */
 .item-carrinho > div:first-child {
   display: flex;
   justify-content: space-between;
@@ -179,7 +174,6 @@ select {
   word-break: break-word;
 }
 
-/* Para o texto do nome e tipo ficar à esquerda */
 .item-carrinho > div:first-child > strong {
   font-size: 1rem;
   word-break: break-word;
@@ -187,14 +181,12 @@ select {
   flex-shrink: 0;
 }
 
-/* Container dos botões + - e quantidade */
 .item-carrinho > div:first-child > span {
   display: flex;
   align-items: center;
   gap: 6px;
 }
 
-/* Botões de controle de quantidade ( + e - ) */
 .item-carrinho button.btn-minus {
   width: 28px;
   height: 28px;
@@ -231,7 +223,6 @@ select {
   background-color: #27632a;
 }
 
-/* Número da quantidade */
 .item-carrinho > div:first-child > span > span {
   display: inline-block;
   min-width: 22px;
@@ -240,7 +231,6 @@ select {
   font-size: 1rem;
 }
 
-/* Ajuste no botão Excluir para não sair da tela */
 .item-carrinho > div:last-child {
   margin-top: 10px;
   text-align: center;
@@ -250,9 +240,35 @@ select {
   flex-shrink: 0;
 }
 
-/* ----------- Responsividade ----------- */
+/* --- Filtros alinhados na mesma linha --- */
 
-/* Para tablets e telas intermediárias */
+#pesquisa-livro {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 8px;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  margin-bottom: 12px;
+  width: 100%;
+  max-width: 350px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 480px) {
+  #pesquisa-livro,
+  #filtro-genero,
+  #filtro-tipo-bebida {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Responsividade */
+
 @media (max-width: 768px) {
   main {
     flex-direction: column;
@@ -280,7 +296,6 @@ select {
   }
 }
 
-/* Para celulares pequenos */
 @media (max-width: 480px) {
   .aba {
     flex: 1 1 100%;
@@ -303,7 +318,6 @@ select {
     margin-top: 6px;
   }
 
-  /* Alinhamento e ajuste no botão Excluir */
   .item-carrinho > div:last-child {
     margin-top: 10px;
     text-align: center;
@@ -312,13 +326,11 @@ select {
     overflow: visible;
   }
 
-  /* Nome do produto pode quebrar linha */
   .item-carrinho strong {
     word-break: break-word;
     white-space: normal;
   }
 
-  /* Botão de finalizar compra ocupa largura total com borda arredondada */
   #finalizar-compra {
     width: 100%;
     border-radius: 8px;
