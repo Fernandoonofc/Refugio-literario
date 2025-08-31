@@ -231,39 +231,129 @@ function renderizarCarrinho() {
 
 function finalizarCompra() {
   if(carrinho.length === 0) {
-    alert('Seu carrinho está vazio.');
+    alert("Seu carrinho está vazio.");
     return;
   }
+
+  const promocoes = [
+    {
+      idBebida: 504,  // Smoothie de Morango
+      idLivro: 16,    // Harry Potter e a Pedra Filosofal
+      descontoPercentual: 15,
+      mensagemIncentivo:
+        "Você tem um dos itens da promoção: Harry Potter e Smoothie de Morango.\n" +
+        "Quer adicionar o outro para aproveitar a magia do desconto de 15% em ambos?",
+      mensagemConfirmacao:
+        "Mágica no ar! Smoothie de Morango com Harry Potter juntos garantem 15% de desconto.\n" +
+        "Confirma finalizar a compra com desconto?"
+    },
+    {
+      idBebida: 101,  // Café Expresso
+      idLivro: 1,     // Duna
+      descontoPercentual: 10,
+      mensagemIncentivo:
+        "Você tem um dos itens da promoção: Duna e Café Expresso.\n" +
+        "Quer adicionar o outro para sentir o calor do desérto do desconto de 10%?",
+      mensagemConfirmacao:
+        "Calor desértico! na compra de Duna com Café Expresso: desconto de 10%!\n" +
+        "Confirma finalizar a compra com desconto?"
+    },
+    {
+      idBebida: 202,  // Chá Verde
+      idLivro: 7,     // Meditações
+      descontoPercentual: 15,
+      mensagemIncentivo:
+        "Você tem um dos itens da promoção: Meditações e Chá Verde.\n" +
+        "Quer adicionar o outro para garantir seu momento zen com 15% de desconto?",
+      mensagemConfirmacao:
+        "Momento zen: Meditações com Chá Verde garantem desconto de 15% .\n" +
+        "Confirma finalizar a compra com desconto?"
+    }
+  ];
+
+  for (const promo of promocoes) {
+    const temBebida = carrinho.some(item => item.idProduto === promo.idBebida);
+    const temLivro = carrinho.some(item => item.idProduto === promo.idLivro && (item.tipo === "comprar" || item.tipo === "alugar"));
+
+    if (temBebida && temLivro) {
+      const confirmar = confirm(promo.mensagemConfirmacao);
+      if (!confirmar) return;
+      const total = calcularTotal();
+      const desconto = (total * promo.descontoPercentual) / 100;
+      const totalComDesconto = total - desconto;
+      alert(`Compra finalizada com sucesso! Total com desconto: ${formatarPreco(totalComDesconto)}`);
+      carrinho = [];
+      renderizarCarrinho();
+      atualizarContadorCarrinho();
+      document.querySelector(".aba.ativa").classList.remove("ativa");
+      document.querySelector("[data-target='aba-bebidas']").classList.add("ativa");
+      abaConteudos.forEach(aba => aba.classList.remove("ativa"));
+      document.getElementById("aba-bebidas").classList.add("ativa");
+      return;
+    }
+
+    if (temBebida && !temLivro) {
+      const querAdicionarLivro = confirm(promo.mensagemIncentivo);
+      if (querAdicionarLivro) {
+        adicionarCarrinho(promo.idLivro, "comprar");
+        alert("Livro adicionado ao carrinho para ativar a promoção!");
+        renderizarCarrinho();
+        atualizarContadorCarrinho();
+      }
+      return;
+    }
+
+    if (!temBebida && temLivro) {
+      const querAdicionarBebida = confirm(promo.mensagemIncentivo);
+      if (querAdicionarBebida) {
+        adicionarCarrinho(promo.idBebida, "comprar");
+        alert("Bebida adicionada ao carrinho para ativar a promoção!");
+        renderizarCarrinho();
+        atualizarContadorCarrinho();
+      }
+      return;
+    }
+  }
+
+  const querFinalizar = confirm("Tem certeza que deseja finalizar essa compra?");
+  if (!querFinalizar) return;
+
   alert(`Compra finalizada com sucesso! Total: ${formatarPreco(calcularTotal())}`);
   carrinho = [];
   renderizarCarrinho();
   atualizarContadorCarrinho();
-  document.querySelector('.aba.ativa').classList.remove('ativa');
-  document.querySelector('[data-target="aba-bebidas"]').classList.add('ativa');
-  abaConteudos.forEach(aba => aba.classList.remove('ativa'));
-  document.getElementById('aba-bebidas').classList.add('ativa');
+  document.querySelector(".aba.ativa").classList.remove("ativa");
+  document.querySelector("[data-target='aba-bebidas']").classList.add("ativa");
+  abaConteudos.forEach(aba => aba.classList.remove("ativa"));
+  document.getElementById("aba-bebidas").classList.add("ativa");
 }
 
 // Controle abas
 menuAbas.forEach(botao => {
-  botao.addEventListener('click', () => {
-    menuAbas.forEach(b => b.classList.remove('ativa'));
-    abaConteudos.forEach(aba => aba.classList.remove('ativa'));
-    botao.classList.add('ativa');
+  botao.addEventListener("click", () => {
+    menuAbas.forEach(b => b.classList.remove("ativa"));
+    abaConteudos.forEach(aba => aba.classList.remove("ativa"));
+    botao.classList.add("ativa");
     const alvo = botao.dataset.target;
-    document.getElementById(alvo).classList.add('ativa');
-    if(alvo === 'aba-carrinho') renderizarCarrinho();
+    document.getElementById(alvo).classList.add("ativa");
+    if (alvo === "aba-carrinho") renderizarCarrinho();
   });
 });
 
 // Eventos filtro e busca livros
-filtroGenero.addEventListener('change', () => renderizarLivros(filtroGenero.value, inputPesquisa.value));
-inputPesquisa.addEventListener('input', () => renderizarLivros(filtroGenero.value, inputPesquisa.value));
+filtroGenero.addEventListener("change", () =>
+  renderizarLivros(filtroGenero.value, inputPesquisa.value)
+);
+inputPesquisa.addEventListener("input", () =>
+  renderizarLivros(filtroGenero.value, inputPesquisa.value)
+);
 
 // Evento filtro bebida
-filtroTipoBebida.addEventListener('change', () => renderizarBebidas(filtroTipoBebida.value));
+filtroTipoBebida.addEventListener("change", () =>
+  renderizarBebidas(filtroTipoBebida.value)
+);
 
-finalizarCompraBtn.addEventListener('click', finalizarCompra);
+finalizarCompraBtn.addEventListener("click", finalizarCompra);
 
 // Inicialização
 renderizarLivros();
