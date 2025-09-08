@@ -6,7 +6,7 @@ const livros = [
     precoComprar: 80,
     precoAlugar: 45,
     genero: "ficcao",
-    imagem: "imagens/duna.jpeg",
+    imagem: "imagens/Duna.jpeg",
   },
   {
     id: 2,
@@ -322,10 +322,11 @@ function renderizarLivros(filtroGeneroVal = "todos", pesquisa = "") {
       <div>
         <button onclick="adicionarCarrinho(${
           livro.id
-        }, 'comprar')">Comprar (${formatarPreco(livro.precoComprar)})</button>
+        }, 'comprar')">Comprar
+         ${formatarPreco(livro.precoComprar)}</button>
         <button onclick="adicionarCarrinho(${
           livro.id
-        }, 'alugar')">Alugar (${formatarPreco(livro.precoAlugar)})</button>
+        }, 'alugar')">Alugar ${formatarPreco(livro.precoAlugar)}</button>
       </div>
     `;
 

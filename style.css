@@ -352,8 +352,8 @@ select {
 
 @media (max-width: 480px) {
   .img-livro {
-    width: 36px;
-    height: 52px;
+    width: 60px;
+    height: 100px;
   }
 }
 
@@ -403,8 +403,8 @@ select {
 }
 
 .livro button {
-  min-width: 140px;
-  width: 140px;
+  min-width: 170px;
+  width: 170px;
   margin-bottom: 0;
   display: block;
   text-align: center;
