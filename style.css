@@ -341,8 +341,8 @@ select {
 }
 
 .img-livro {
-  width: 48px;
-  height: 68px;
+  width: 58px;
+  height: 78px;
   object-fit: cover;
   border-radius: 6px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
@@ -352,8 +352,8 @@ select {
 
 @media (max-width: 480px) {
   .img-livro {
-    width: 60px;
-    height: 100px;
+    width: 80px;
+    height: 120px;
   }
 }
 
@@ -411,7 +411,7 @@ select {
   box-sizing: border-box;
 }
 
-/* Responsividade para telas pequenas */
+/* Responsivo para telas pequenas */
 @media (max-width: 600px) {
   .livro {
     flex-direction: column;
@@ -425,5 +425,119 @@ select {
   }
   .livro > div:last-child {
     align-items: center;
+  }
+
+  .produto button {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+/* Centraliza os filtros */
+#filtros {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 20px auto;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+#filtros > div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#filtros label {
+  flex: 1;
+  margin-right: 10px;
+  text-align: right;
+}
+
+#filtros select,
+#filtros button {
+  flex: 2;
+  min-width: 120px;
+}
+
+@media (max-width: 480px) {
+  #filtros {
+    flex-direction: column;
+  }
+
+  #filtros > div {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #filtros label {
+    margin-right: 0;
+    margin-bottom: 5px;
+    text-align: left;
+  }
+
+  #filtros select,
+  #filtros button {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+/* Centraliza os filtros e campos de pesquisa nas abas */
+#filtro-genero,
+#filtro-tipo-bebida {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 12px;
+  margin-top: 6px;
+  max-width: 230px;
+  width: 100%;
+  text-align: center;
+}
+
+label[for="filtro-genero"],
+label[for="filtro-tipo-bebida"] {
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+/* Garante que o campo de pesquisa também fique centralizado */
+#pesquisa-livro {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 12px;
+  max-width: 350px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Deixa todos os botões de bebidas do mesmo tamanho e centralizados */
+.produto button {
+  width: 150px;
+  min-width: 150px;
+  max-width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Responsivo para telas pequenas */
+@media (max-width: 480px) {
+  .produto button {
+    width: 100%;
+    min-width: 0;
   }
 }

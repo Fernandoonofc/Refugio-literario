@@ -87,6 +87,7 @@ const livros = [
     precoComprar: 52,
     precoAlugar: 31,
     genero: "romance",
+    imagem: "imagens/orgulho-e-preconceito.jpg",
   },
   {
     id: 11,
@@ -95,6 +96,7 @@ const livros = [
     precoComprar: 38,
     precoAlugar: 26,
     genero: "romance",
+    imagem: "imagens/dom-casmurro.jpg",
   },
   {
     id: 12,
@@ -103,6 +105,7 @@ const livros = [
     precoComprar: 59,
     precoAlugar: 34,
     genero: "romance",
+    imagem: "imagens/culpa-estrelas.jpg",
   },
   {
     id: 13,
@@ -111,6 +114,7 @@ const livros = [
     precoComprar: 96,
     precoAlugar: 67,
     genero: "tecnologia",
+    imagem: "imagens/clean-code.jpg",
   },
   {
     id: 14,
@@ -119,6 +123,7 @@ const livros = [
     precoComprar: 140,
     precoAlugar: 96,
     genero: "tecnologia",
+    imagem: "imagens/programar-computadores.jpg",
   },
   {
     id: 15,
@@ -127,6 +132,7 @@ const livros = [
     precoComprar: 110,
     precoAlugar: 70,
     genero: "tecnologia",
+    imagem: "imagens/estruturas-java.jpg",
   },
   {
     id: 16,
@@ -139,11 +145,12 @@ const livros = [
   },
   {
     id: 17,
-    titulo: "O Senhor dos Anéis",
+    titulo: "O Senhor dos Anéis parte 1: Sociedade do anél",
     autor: "J.R.R. Tolkien",
-    precoComprar: 100,
-    precoAlugar: 85,
+    precoComprar: 64,
+    precoAlugar: 50,
     genero: "fantasia",
+    imagem: "imagens/senhor-dos-anais.jpg",
   },
   {
     id: 18,
@@ -152,6 +159,7 @@ const livros = [
     precoComprar: 34,
     precoAlugar: 22,
     genero: "fantasia",
+    imagem: "imagens/pequeno-principe.jpg",
   },
   {
     id: 19,
@@ -160,6 +168,7 @@ const livros = [
     precoComprar: 46,
     precoAlugar: 28,
     genero: "biografia",
+    imagem: "imagens/anne-frank.jpg",
   },
   {
     id: 20,
@@ -168,6 +177,7 @@ const livros = [
     precoComprar: 58,
     precoAlugar: 28,
     genero: "biografia",
+    imagem: "imagens/steve-trabalhas.jpg",
   },
   {
     id: 21,
@@ -176,6 +186,7 @@ const livros = [
     precoComprar: 69,
     precoAlugar: 35,
     genero: "biografia",
+    imagem: "imagens/nelson-mandanela.jpg",
   },
   {
     id: 22,
@@ -184,6 +195,7 @@ const livros = [
     precoComprar: 75,
     precoAlugar: 52,
     genero: "historia",
+    imagem: "imagens/sapiens.jpg",
   },
   {
     id: 23,
@@ -192,6 +204,7 @@ const livros = [
     precoComprar: 45,
     precoAlugar: 36,
     genero: "historia",
+    imagem: "imagens/1499.jpg",
   },
   {
     id: 24,
@@ -200,6 +213,7 @@ const livros = [
     precoComprar: 70,
     precoAlugar: 52,
     genero: "historia",
+    imagem: "imagens/donos-poder.jpg",
   },
   {
     id: 25,
@@ -208,6 +222,7 @@ const livros = [
     precoComprar: 120,
     precoAlugar: 70,
     genero: "filosofia",
+    imagem: "imagens/vontade.jpg",
   },
   {
     id: 26,
@@ -216,6 +231,7 @@ const livros = [
     precoComprar: 140,
     precoAlugar: 65,
     genero: "filosofia",
+    imagem: "imagens/razao-pura.jpg",
   },
   {
     id: 27,
@@ -224,49 +240,60 @@ const livros = [
     precoComprar: 42,
     precoAlugar: 37,
     genero: "filosofia",
+    imagem: "imagens/filosofia.webp",
   },
 ];
 
 const bebidas = [
-  { id: 101, tipo: "cafe", nome: "Café Expresso", precoComprar: 5 },
-  { id: 102, tipo: "cafe", nome: "Café Expresso Duplo", precoComprar: 8 },
-  { id: 103, tipo: "cafe", nome: "Cappuccino", precoComprar: 7 },
-  { id: 104, tipo: "cafe", nome: "Latte Macchiato", precoComprar: 8 },
-  { id: 105, tipo: "cafe", nome: "Mocha", precoComprar: 8 },
+  { id: 101, tipo: "cafe", nome: "Café Expresso", precoComprar: 6.5 },
+  { id: 102, tipo: "cafe", nome: "Café Expresso Duplo", precoComprar: 10 },
+  { id: 103, tipo: "cafe", nome: "Cappuccino", precoComprar: 9 },
+  { id: 104, tipo: "cafe", nome: "Latte Macchiato", precoComprar: 11 },
+  { id: 105, tipo: "cafe", nome: "Mocha", precoComprar: 12 },
 
-  { id: 201, tipo: "cha", nome: "Chá de Camomila", precoComprar: 4 },
-  { id: 202, tipo: "cha", nome: "Chá Verde", precoComprar: 4 },
+  { id: 201, tipo: "cha", nome: "Chá de Camomila", precoComprar: 7 },
+  { id: 202, tipo: "cha", nome: "Chá Verde", precoComprar: 6 },
   { id: 203, tipo: "cha", nome: "Chá Mate", precoComprar: 5 },
-  { id: 204, tipo: "cha", nome: "Chá Preto", precoComprar: 5 },
-  { id: 205, tipo: "cha", nome: "Chá de Frutas Vermelhas", precoComprar: 5 },
+  { id: 204, tipo: "cha", nome: "Chá Preto", precoComprar: 7.5 },
+  { id: 205, tipo: "cha", nome: "Chá de Frutas Vermelhas", precoComprar: 9 },
 
-  { id: 301, tipo: "suco", nome: "Suco de Laranja", precoComprar: 5 },
-  { id: 302, tipo: "suco", nome: "Suco de Uva", precoComprar: 5 },
-  { id: 303, tipo: "suco", nome: "Suco de Maracujá", precoComprar: 5 },
-  { id: 304, tipo: "suco", nome: "Suco de Manga", precoComprar: 6 },
+  { id: 301, tipo: "suco", nome: "Suco de Laranja", precoComprar: 7 },
+  { id: 302, tipo: "suco", nome: "Suco de Uva", precoComprar: 8.5 },
+  { id: 303, tipo: "suco", nome: "Suco de Maracujá", precoComprar: 10 },
+  { id: 304, tipo: "suco", nome: "Suco de Manga", precoComprar: 11 },
   {
     id: 305,
     tipo: "suco",
     nome: "Suco de Abacaxi com Hortelã",
-    precoComprar: 6,
+    precoComprar: 13,
   },
 
-  { id: 401, tipo: "agua", nome: "Água Mineral", precoComprar: 3 },
-  { id: 402, tipo: "agua", nome: "Água com Gás", precoComprar: 3.5 },
-  { id: 403, tipo: "agua", nome: "Água Saborizada com Limão", precoComprar: 4 },
+  { id: 401, tipo: "agua", nome: "Água Mineral", precoComprar: 5 },
+  { id: 402, tipo: "agua", nome: "Água com Gás", precoComprar: 5 },
+  {
+    id: 403,
+    tipo: "agua",
+    nome: "Água Saborizada com Limão",
+    precoComprar: 6.5,
+  },
   {
     id: 404,
     tipo: "agua",
     nome: "Água Saborizada com Hortelã",
-    precoComprar: 4,
+    precoComprar: 6.5,
   },
-  { id: 405, tipo: "agua", nome: "Água Tônica", precoComprar: 4.5 },
+  { id: 405, tipo: "agua", nome: "Água Tônica", precoComprar: 6.5 },
 
-  { id: 501, tipo: "outros", nome: "Chocolate Quente", precoComprar: 7 },
+  { id: 501, tipo: "outros", nome: "Chocolate Quente", precoComprar: 8 },
   { id: 502, tipo: "outros", nome: "Chocolate Gelado", precoComprar: 8 },
   { id: 503, tipo: "outros", nome: "Frappuccino", precoComprar: 10 },
-  { id: 504, tipo: "outros", nome: "Smoothie de Morango", precoComprar: 9 },
-  { id: 505, tipo: "outros", nome: "Milk-shake de Chocolate", precoComprar: 9 },
+  { id: 504, tipo: "outros", nome: "Smoothie de Morango", precoComprar: 12 },
+  {
+    id: 505,
+    tipo: "outros",
+    nome: "Milk-shake de Chocolate",
+    precoComprar: 14,
+  },
 ];
 
 const listaLivrosElem = document.getElementById("lista-livros");
@@ -320,9 +347,7 @@ function renderizarLivros(filtroGeneroVal = "todos", pesquisa = "") {
         </div>
       </div>
       <div>
-        <button onclick="adicionarCarrinho(${
-          livro.id
-        }, 'comprar')">Comprar
+        <button onclick="adicionarCarrinho(${livro.id}, 'comprar')">Comprar
          ${formatarPreco(livro.precoComprar)}</button>
         <button onclick="adicionarCarrinho(${
           livro.id
@@ -347,7 +372,7 @@ function renderizarBebidas(tipo = "todos") {
       <div><strong>${bebida.nome}</strong></div>
       <div>
         <button onclick="adicionarCarrinho(${bebida.id}, 'comprar')">
-          Comprar (${formatarPreco(bebida.precoComprar)})
+          Comprar ${formatarPreco(bebida.precoComprar)}
         </button>
       </div>
     `;
@@ -472,7 +497,7 @@ function finalizarCompra() {
       idLivro: 16, // Harry Potter e a Pedra Filosofal
       descontoPercentual: 15,
       mensagemIncentivo:
-        "Você tem um dos itens da promoção: Harry Potter ou Smoothie de Morango.\n" +
+        "Você tem um dos itens da promoção: Harry Potter e Smoothie de Morango.\n" +
         "Quer adicionar o outro para aproveitar a magia do desconto de 15% em ambos?",
       mensagemConfirmacao:
         "Mágica no ar! Smoothie de Morango com Harry Potter juntos garantem 15% de desconto.\n" +
@@ -483,10 +508,10 @@ function finalizarCompra() {
       idLivro: 1, // Duna
       descontoPercentual: 10,
       mensagemIncentivo:
-        "Você tem um dos itens da promoção: Duna ou Café Expresso.\n" +
-        "Quer adicionar o outro para sentir o calor desértico do desconto de 10%?",
+        "Você tem um dos itens da promoção: Duna e Café Expresso.\n" +
+        "Quer adicionar o outro para sentir o calor do deserto do desconto de 10%?",
       mensagemConfirmacao:
-        "Calor desértico na compra de Duna com Café Expresso: desconto de 10%!\n" +
+        "Calor desértico! Na compra de Duna com Café Expresso: desconto de 10%!\n" +
         "Confirma finalizar a compra com desconto?",
     },
     {
@@ -494,7 +519,7 @@ function finalizarCompra() {
       idLivro: 7, // Meditações
       descontoPercentual: 15,
       mensagemIncentivo:
-        "Você tem um dos itens da promoção: Meditações ou Chá Verde.\n" +
+        "Você tem um dos itens da promoção: Meditações e Chá Verde.\n" +
         "Quer adicionar o outro para garantir seu momento zen com 15% de desconto?",
       mensagemConfirmacao:
         "Momento zen: Meditações com Chá Verde garantem 15% OFF.\n" +
@@ -502,8 +527,8 @@ function finalizarCompra() {
     },
   ];
 
-  // Flag para saber se já tratou alguma promoção
-  let promocaoTratada = false;
+  let descontos = [];
+  let recusouPromocao = false;
 
   for (const promo of promocoes) {
     const temBebida = carrinho.some(
@@ -517,60 +542,34 @@ function finalizarCompra() {
 
     if (temBebida && temLivro) {
       const confirmar = confirm(promo.mensagemConfirmacao);
-      if (!confirmar) {
-        // Cliente recusou o desconto, finalizar compra normalmente SEM desconto
-        alert(
-          `Compra finalizada com sucesso! Total: ${formatarPreco(
-            calcularTotal()
-          )}`
-        );
-        carrinho = [];
-        renderizarCarrinho();
-        atualizarContadorCarrinho();
-        document.querySelector(".aba.ativa").classList.remove("ativa");
-        document
-          .querySelector("[data-target='aba-bebidas']")
-          .classList.add("ativa");
-        abaConteudos.forEach((aba) => aba.classList.remove("ativa"));
-        document.getElementById("aba-bebidas").classList.add("ativa");
-        return;
+      if (confirmar) {
+        descontos.push(promo);
+      } else {
+        recusouPromocao = true;
       }
-      const total = calcularTotal();
-      const desconto = (total * promo.descontoPercentual) / 100;
-      const totalComDesconto = total - desconto;
-      alert(
-        `Compra finalizada com sucesso! Total com desconto: ${formatarPreco(
-          totalComDesconto
-        )}`
-      );
-      carrinho = [];
-      renderizarCarrinho();
-      atualizarContadorCarrinho();
-      document.querySelector(".aba.ativa").classList.remove("ativa");
-      document
-        .querySelector("[data-target='aba-bebidas']")
-        .classList.add("ativa");
-      abaConteudos.forEach((aba) => aba.classList.remove("ativa"));
-      document.getElementById("aba-bebidas").classList.add("ativa");
-      return;
-    }
-
-    if ((temBebida && !temLivro) || (!temBebida && temLivro)) {
+    } else if ((temBebida && !temLivro) || (!temBebida && temLivro)) {
       const querAdicionar = confirm(promo.mensagemIncentivo);
       if (querAdicionar) {
         if (temBebida) {
-          adicionarCarrinho(promo.idLivro, "comprar");
-          alert("Livro adicionado ao carrinho para ativar a promoção!");
+          const tipoLivro = confirm(
+            "Deseja ADICIONAR o livro para COMPRAR?\n(Clique em Cancelar para ALUGAR)"
+          )
+            ? "comprar"
+            : "alugar";
+          adicionarCarrinho(promo.idLivro, tipoLivro);
+          alert(
+            `Livro adicionado ao carrinho para ${
+              tipoLivro === "comprar" ? "compra" : "aluguel"
+            } e ativar a promoção!`
+          );
         } else {
           adicionarCarrinho(promo.idBebida, "comprar");
           alert("Bebida adicionada ao carrinho para ativar a promoção!");
         }
         renderizarCarrinho();
         atualizarContadorCarrinho();
-        // Não finaliza a compra ainda, deixa o usuário revisar o carrinho
-        return;
+        return; // Deixa o usuário revisar o carrinho antes de finalizar
       } else {
-        // Cliente recusou adicionar o outro item, pode finalizar normalmente sem desconto
         const querFinalizar = confirm(
           "Deseja finalizar a compra normalmente sem promoção?"
         );
@@ -595,14 +594,195 @@ function finalizarCompra() {
     }
   }
 
-  // Se não entrou em nenhuma promoção, finaliza normalmente
-  const querFinalizar = confirm(
-    "Tem certeza que deseja finalizar essa compra?"
-  );
-  if (!querFinalizar) return;
-  alert(
-    `Compra finalizada com sucesso! Total: ${formatarPreco(calcularTotal())}`
-  );
+  // Aplica descontos cumulativos
+  let total = calcularTotal();
+  let totalDesconto = 0;
+  descontos.forEach((promo) => {
+    // Calcula desconto apenas sobre os itens da promoção
+    let subtotal = 0;
+    carrinho.forEach((item) => {
+      if (
+        item.idProduto === promo.idBebida ||
+        (item.idProduto === promo.idLivro &&
+          (item.tipo === "comprar" || item.tipo === "alugar"))
+      ) {
+        let produto = livros.find((l) => l.id === item.idProduto);
+        if (!produto) produto = bebidas.find((b) => b.id === item.idProduto);
+        if (!produto) return;
+        let preco = livros.includes(produto)
+          ? item.tipo === "comprar"
+            ? produto.precoComprar
+            : produto.precoAlugar
+          : produto.precoComprar;
+        subtotal += preco * item.quantidade;
+      }
+    });
+    totalDesconto += (subtotal * promo.descontoPercentual) / 100;
+  });
+
+  if (descontos.length > 0) {
+    alert(
+      `Compra finalizada com sucesso!\nTotal com desconto: ${formatarPreco(
+        total - totalDesconto
+      )}`
+    );
+  } else {
+    alert(`Compra finalizada com sucesso! Total: ${formatarPreco(total)}`);
+  }
+
+  carrinho = [];
+  renderizarCarrinho();
+  atualizarContadorCarrinho();
+  document.querySelector(".aba.ativa").classList.remove("ativa");
+  document.querySelector("[data-target='aba-bebidas']").classList.add("ativa");
+  abaConteudos.forEach((aba) => aba.classList.remove("ativa"));
+  document.getElementById("aba-bebidas").classList.add("ativa");
+}
+function finalizarCompra() {
+  if (carrinho.length === 0) {
+    alert("Seu carrinho está vazio.");
+    return;
+  }
+
+  const promocoes = [
+    {
+      idBebida: 504, // Smoothie de Morango
+      idLivro: 16, // Harry Potter e a Pedra Filosofal
+      descontoPercentual: 15,
+      mensagemIncentivo:
+        "Você tem um dos itens da promoção: Harry Potter e Smoothie de Morango.\n" +
+        "Quer adicionar o outro para aproveitar a magia do desconto de 15% em ambos?",
+      mensagemConfirmacao:
+        "Mágica no ar! Smoothie de Morango com Harry Potter juntos garantem 15% de desconto.\n" +
+        "Confirma finalizar a compra com desconto?",
+    },
+    {
+      idBebida: 101, // Café Expresso
+      idLivro: 1, // Duna
+      descontoPercentual: 10,
+      mensagemIncentivo:
+        "Você tem um dos itens da promoção: Duna e Café Expresso.\n" +
+        "Quer adicionar o outro para sentir o calor do deserto do desconto de 10%?",
+      mensagemConfirmacao:
+        "Calor desértico! Na compra de Duna com Café Expresso: desconto de 10%!\n" +
+        "Confirma finalizar a compra com desconto?",
+    },
+    {
+      idBebida: 202, // Chá Verde
+      idLivro: 7, // Meditações
+      descontoPercentual: 15,
+      mensagemIncentivo:
+        "Você tem um dos itens da promoção: Meditações e Chá Verde.\n" +
+        "Quer adicionar o outro para garantir seu momento zen com 15% de desconto?",
+      mensagemConfirmacao:
+        "Momento zen: Meditações com Chá Verde garantem 15% OFF.\n" +
+        "Confirma finalizar a compra com desconto?",
+    },
+  ];
+
+  let descontos = [];
+  let recusouPromocao = false;
+
+  for (const promo of promocoes) {
+    const temBebida = carrinho.some(
+      (item) => item.idProduto === promo.idBebida
+    );
+    const temLivro = carrinho.some(
+      (item) =>
+        item.idProduto === promo.idLivro &&
+        (item.tipo === "comprar" || item.tipo === "alugar")
+    );
+
+    if (temBebida && temLivro) {
+      const confirmar = confirm(promo.mensagemConfirmacao);
+      if (confirmar) {
+        descontos.push(promo);
+      } else {
+        recusouPromocao = true;
+      }
+    } else if ((temBebida && !temLivro) || (!temBebida && temLivro)) {
+      const querAdicionar = confirm(promo.mensagemIncentivo);
+      if (querAdicionar) {
+        if (temBebida) {
+          const tipoLivro = confirm(
+            "Deseja ADICIONAR o livro para COMPRAR?\n(Clique em Cancelar para ALUGAR)"
+          )
+            ? "comprar"
+            : "alugar";
+          adicionarCarrinho(promo.idLivro, tipoLivro);
+          alert(
+            `Livro adicionado ao carrinho para ${
+              tipoLivro === "comprar" ? "compra" : "aluguel"
+            } e ativar a promoção!`
+          );
+        } else {
+          adicionarCarrinho(promo.idBebida, "comprar");
+          alert("Bebida adicionada ao carrinho para ativar a promoção!");
+        }
+        renderizarCarrinho();
+        atualizarContadorCarrinho();
+        return; // Deixa o usuário revisar o carrinho antes de finalizar
+      } else {
+        const querFinalizar = confirm(
+          "Deseja finalizar a compra normalmente sem promoção?"
+        );
+        if (querFinalizar) {
+          alert(
+            `Compra finalizada com sucesso! Total: ${formatarPreco(
+              calcularTotal()
+            )}`
+          );
+          carrinho = [];
+          renderizarCarrinho();
+          atualizarContadorCarrinho();
+          document.querySelector(".aba.ativa").classList.remove("ativa");
+          document
+            .querySelector("[data-target='aba-bebidas']")
+            .classList.add("ativa");
+          abaConteudos.forEach((aba) => aba.classList.remove("ativa"));
+          document.getElementById("aba-bebidas").classList.add("ativa");
+        }
+        return;
+      }
+    }
+  }
+
+  // Aplica descontos cumulativos
+  let total = calcularTotal();
+  let totalDesconto = 0;
+  descontos.forEach((promo) => {
+    // Calcula desconto apenas sobre os itens da promoção
+    let subtotal = 0;
+    carrinho.forEach((item) => {
+      if (
+        item.idProduto === promo.idBebida ||
+        (item.idProduto === promo.idLivro &&
+          (item.tipo === "comprar" || item.tipo === "alugar"))
+      ) {
+        let produto = livros.find((l) => l.id === item.idProduto);
+        if (!produto) produto = bebidas.find((b) => b.id === item.idProduto);
+        if (!produto) return;
+        let preco = livros.includes(produto)
+          ? item.tipo === "comprar"
+            ? produto.precoComprar
+            : produto.precoAlugar
+          : produto.precoComprar;
+        subtotal += preco * item.quantidade;
+      }
+    });
+    totalDesconto += (subtotal * promo.descontoPercentual) / 100;
+  });
+
+  if (descontos.length > 0) {
+    alert(
+      `Compra finalizada com sucesso!\nTotal com desconto: ${formatarPreco(
+        total - totalDesconto
+      )}`
+    );
+  } else {
+    alert(`Compra finalizada com sucesso! Total: ${formatarPreco(total)}`);
+  }
+
   carrinho = [];
   renderizarCarrinho();
   atualizarContadorCarrinho();
@@ -612,36 +792,65 @@ function finalizarCompra() {
   document.getElementById("aba-bebidas").classList.add("ativa");
 }
 
-// Controle abas e eventos
-
-menuAbas.forEach((botao) => {
-  botao.addEventListener("click", () => {
+// Troca de abas
+menuAbas.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    // Remove ativa de todas as abas e conteúdos
     menuAbas.forEach((b) => b.classList.remove("ativa"));
-    abaConteudos.forEach((aba) => aba.classList.remove("ativa"));
-    botao.classList.add("ativa");
-    const alvo = botao.dataset.target;
-    document.getElementById(alvo).classList.add("ativa");
-    if (alvo === "aba-carrinho") renderizarCarrinho();
+    abaConteudos.forEach((c) => c.classList.remove("ativa"));
+
+    // Ativa a aba clicada e o conteúdo correspondente
+    btn.classList.add("ativa");
+    const target = btn.getAttribute("data-target");
+    document.getElementById(target).classList.add("ativa");
+
+    // Renderiza o carrinho se for a aba carrinho
+    if (target === "aba-carrinho") {
+      renderizarCarrinho();
+    }
   });
 });
 
-filtroGenero.addEventListener("change", () =>
-  renderizarLivros(filtroGenero.value, inputPesquisa.value)
-);
-inputPesquisa.addEventListener("input", () =>
-  renderizarLivros(filtroGenero.value, inputPesquisa.value)
-);
+// Preenche filtro de gênero dinamicamente
+if (filtroGenero) {
+  const generos = ["todos", ...new Set(livros.map((l) => l.genero))];
+  filtroGenero.innerHTML = generos
+    .map(
+      (g) =>
+        `<option value="${g}">${
+          g.charAt(0).toUpperCase() + g.slice(1)
+        }</option>`
+    )
+    .join("");
+  filtroGenero.addEventListener("change", () => {
+    renderizarLivros(filtroGenero.value, inputPesquisa.value);
+  });
+}
 
-filtroTipoBebida.addEventListener("change", () =>
-  renderizarBebidas(filtroTipoBebida.value)
-);
+// Filtro de tipo de bebida
+if (filtroTipoBebida) {
+  const tipos = ["todos", ...new Set(bebidas.map((b) => b.tipo))];
+  filtroTipoBebida.innerHTML = tipos
+    .map(
+      (t) =>
+        `<option value="${t}">${
+          t.charAt(0).toUpperCase() + t.slice(1)
+        }</option>`
+    )
+    .join("");
+  filtroTipoBebida.addEventListener("change", () => {
+    renderizarBebidas(filtroTipoBebida.value);
+  });
+}
 
-finalizarCompraBtn.addEventListener("click", finalizarCompra);
+// Pesquisa de livros
+if (inputPesquisa) {
+  inputPesquisa.addEventListener("input", () => {
+    renderizarLivros(filtroGenero.value, inputPesquisa.value);
+  });
+}
 
+// Inicializações
 renderizarLivros();
 renderizarBebidas();
 atualizarContadorCarrinho();
-
-window.adicionarCarrinho = adicionarCarrinho;
-window.removerItemCarrinho = removerItemCarrinho;
-window.alterarQuantidadeCarrinho = alterarQuantidadeCarrinho;

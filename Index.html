@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Refúgio Literário</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Refúgio Literário</h1>
+    </header>
+
+    <nav id="menu-principal">
+      <button class="aba ativa" data-target="aba-bebidas">Bebidas</button>
+      <button class="aba" data-target="aba-livros">Livros</button>
+      <button class="aba" data-target="aba-carrinho">
+        Carrinho (<span id="contador-carrinho">0</span>)
+      </button>
+    </nav>
+
+    <main>
+      <section id="aba-bebidas" class="aba-conteudo ativa">
+        <h2>Bebidas</h2>
+        <label for="filtro-tipo-bebida">Filtrar por tipo:</label>
+        <select id="filtro-tipo-bebida">
+          <option value="todos">Todas</option>
+          <option value="cafe">Cafés</option>
+          <option value="cha">Chás</option>
+          <option value="suco">Sucos</option>
+          <option value="agua">Águas</option>
+          <option value="outros">Outros</option>
+        </select>
+        <div id="lista-bebidas"></div>
+      </section>
+
+      <section id="aba-livros" class="aba-conteudo">
+        <h2>Livros para Comprar ou Alugar</h2>
+        <input
+          type="text"
+          id="pesquisa-livro"
+          placeholder="Busque por nome, autor ou gênero"
+        />
+        <label for="filtro-genero">Filtrar por gênero:</label>
+        <select id="filtro-genero">
+          <option value="todos">Todos</option>
+          <option value="ficcao">Ficção Científica</option>
+          <option value="suspense">Suspense</option>
+          <option value="romance">Romance</option>
+          <option value="fantasia">Fantasia</option>
+          <option value="tecnologia">Tecnologia</option>
+          <option value="autoajuda">Autoajuda</option>
+          <option value="biografia">Biografia</option>
+          <option value="historia">História</option>
+          <option value="filosofia">Filosofia</option>
+        </select>
+        <div id="lista-livros"></div>
+      </section>
+
+      <section id="aba-carrinho" class="aba-conteudo">
+        <h2>Seu Carrinho</h2>
+        <div id="itens-carrinho"></div>
+        <div id="total-carrinho" style="margin: 16px 0; font-weight: bold">
+          Total: R$ 0,00
+        </div>
+        <button id="finalizar-compra" onclick="finalizarCompra()">
+          Finalizar Compra
+        </button>
+      </section>
+    </main>
+    <!-- obrigado ghus por ter visto o site e ter achado este easter egg(eu espero) voce é um cara FODA,estou aberto a ideias de melhorias do site e um beijo na nadega esquerda😘🍑(twitch.tv/ghasmeplay)!-->
+    <script src="script.js"></script>
+  </body>
+</html>
