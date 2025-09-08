@@ -73,7 +73,7 @@ main {
   background: white;
   border-radius: 12px;
   border: 3px solid #7f644e;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.10);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px 24px;
   width: 350px;
   max-height: 450px;
@@ -93,7 +93,8 @@ main {
   margin: 0 0 12px 0;
 }
 
-.produto, .livro {
+.produto,
+.livro {
   border-bottom: 1px solid #e0dcd4;
   padding: 10px 0;
   display: flex;
@@ -102,7 +103,8 @@ main {
   font-size: 0.95rem;
 }
 
-.produto:last-child, .livro:last-child {
+.produto:last-child,
+.livro:last-child {
   border-bottom: none;
 }
 
@@ -335,5 +337,93 @@ select {
     width: 100%;
     border-radius: 8px;
     box-sizing: border-box;
+  }
+}
+
+.img-livro {
+  width: 48px;
+  height: 68px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  background: #eee;
+  flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+  .img-livro {
+    width: 36px;
+    height: 52px;
+  }
+}
+
+/* Garante que a lista de livros não cause overflow horizontal */
+#lista-livros {
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* Garante que cada livro ocupe o espaço corretamente e não force overflow */
+.livro {
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  flex-wrap: wrap;
+  word-break: break-word;
+}
+
+/* Ajusta a linha do livro para layout em linha: imagem | info | botões */
+.livro {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Garante que o bloco do nome/autor fique centralizado verticalmente */
+.livro > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex: 1 1 auto;
+  min-width: 0;
+  font-size: 1rem;
+  text-align: left;
+  word-break: break-word;
+}
+
+/* Botões um embaixo do outro, do mesmo tamanho */
+.livro > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center; /* <-- Alinhado ao centro */
+  justify-content: center;
+}
+
+.livro button {
+  min-width: 140px;
+  width: 140px;
+  margin-bottom: 0;
+  display: block;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 600px) {
+  .livro {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    text-align: center;
+  }
+  .livro > div:nth-child(2) {
+    align-items: center;
+    text-align: center;
+  }
+  .livro > div:last-child {
+    align-items: center;
   }
 }
