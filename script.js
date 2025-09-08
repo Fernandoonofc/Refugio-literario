@@ -6,7 +6,7 @@ const livros = [
     precoComprar: 80,
     precoAlugar: 45,
     genero: "ficcao",
-    imagem: "imagens/duna.jpg",
+    imagem: "imagens/duna.jpeg",
   },
   {
     id: 2,
